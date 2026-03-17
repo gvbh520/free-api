@@ -2,6 +2,14 @@
 
 这是一个免费的兼容 OpenAI API 格式的大模型接口服务。
 
+## 快速入口
+
+| 项目 | 链接 |
+|------|------|
+| 在线体验 | [在线体验](https://chat.good.hidns.vip) |
+| 模型状态 | [模型状态监测页面](https://status.good.hidns.vip) |
+| 使用教程 | [视频教程（B 站）](https://www.bilibili.com/video/BV1XHw2zrEzY) |
+
 
 ## 接口信息
 
@@ -9,9 +17,6 @@
 |--------|-----|
 | API 地址 | `https://openai.good.hidns.vip/v1` |
 | API Key | `sk-B882bCwUweSeMRscoNwxZw4vxpjXmvWTLBxO5aXC7WAYhfwa` |
-| 在线体验 | [在线体验](https://chat.good.hidns.vip) |
-| 模型状态 | [模型状态监测页面](https://status.good.hidns.vip) |
-| 使用教程 | [视频教程（B 站）](https://www.bilibili.com/video/BV1XHw2zrEzY) |
 
 
 ## 支持的模型
