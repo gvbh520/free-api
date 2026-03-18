@@ -7,7 +7,6 @@
 | 项目 | 链接 |
 |------|------|
 | 在线体验 | [在线体验](https://chat.good.hidns.vip) |
-| 模型状态 | [模型状态监测页面](https://status.good.hidns.vip) |
 | 使用教程 | [视频教程（B 站）](https://www.bilibili.com/video/BV1XHw2zrEzY) |
 
 
@@ -21,26 +20,45 @@
 > 该 Key 为公开共享用途，请勿用于生产环境中的强依赖场景。
 
 
-## 支持的模型
+## 支持的模型（[模型状态页面](https://status.good.hidns.vip)）
 
-| 模型 | 说明 | 状态 |
-|------|------|----------|
-| gpt | 对话、识图、工具，推荐使用 | 正常 |
-| grok | 生图首选，对话内容限制较少 | 正常 |
-| qwen3.5 | 通义千问 | 正常 |
-| glm5 | 智谱 GLM | 很慢 |
-| k2.5 | Kimi | 很慢 |
-| minimax-m2.5 | MiniMax | 很慢 |
-| deepseek-v3.2 | DeepSeek | 很慢 |
+| 模型 | 说明 |
+|------|------|
+| gpt5 | 对话、识图、工具，推荐使用 |
+| grok4 | 生图首选，对话内容限制较少 |
+| qwen3.5 | 通义千问 |
+| glm5 | 智谱 GLM |
+| k2.5 | Kimi |
+| minimax-m2.5 | MiniMax |
+| deepseek-v3.2 | DeepSeek |
 
 > 模型变更：`gpt-5.4` 和 `gpt-5.3-codex` 已重新上线，可直接使用。
 
-> 注意：该服务的 `grok` 和 `qwen` 不支持工具调用，强行调用时返回结果可能异常。
+> 注意：该服务的 `grok4` 和 `qwen3.5` 不支持工具调用，强行调用时返回结果可能异常。
 
 ## 支持的端点
 
 - `/v1/chat/completions` - 对话补全
 - `/v1/models` - 模型列表
+
+## 最小可用示例
+
+将以下命令直接复制到终端即可测试：
+
+```bash
+curl https://openai.good.hidns.vip/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer sk-B882bCwUweSeMRscoNwxZw4vxpjXmvWTLBxO5aXC7WAYhfwa" \
+  -d '{
+    "model": "gpt-5.2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，请简单介绍一下你自己"
+      }
+    ]
+  }'
+```
 
 ## 注意事项
 
