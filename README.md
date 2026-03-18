@@ -40,8 +40,9 @@
 
 ## 支持的端点
 
-- `/v1/chat/completions` - 对话补全
 - `/v1/models` - 模型列表
+- `/v1/chat/completions` - 对话补全
+- `/v1/images/generations` - 图片生成
 
 ## 最小可用示例
 
@@ -59,6 +60,34 @@ curl https://openai.good.hidns.vip/v1/chat/completions \
         "content": "你好，请简单介绍一下你自己"
       }
     ]
+  }'
+```
+
+### 图片生成（/v1/images/generations）
+
+> 当前图片生成需要指定模型：`grok-imagine-1.0`
+
+当前仅支持 `response_format: "b64_json"`（返回 base64）。
+
+`size` 可选值：
+- `1024x1024`
+- `1024x1792`
+- `1792x1024`
+- `1280x720`
+- `720x1280`
+
+#### 返回 base64（最小可用）
+
+```bash
+curl https://openai.good.hidns.vip/v1/images/generations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer sk-B882bCwUweSeMRscoNwxZw4vxpjXmvWTLBxO5aXC7WAYhfwa" \
+  -d '{
+    "model": "grok-imagine-1.0",
+    "prompt": "生成一张极简风格的火箭扁平图标，白色背景",
+    "n": 1,
+    "size": "1024x1024",
+    "response_format": "b64_json"
   }'
 ```
 

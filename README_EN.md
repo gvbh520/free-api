@@ -39,8 +39,9 @@ Free API is a public, no-cost API service compatible with the OpenAI API format.
 
 ## Supported Endpoints
 
-- `/v1/chat/completions` - Chat completions
 - `/v1/models` - Model list
+- `/v1/chat/completions` - Chat completions
+- `/v1/images/generations` - Image generation
 
 ## Minimal Example
 
@@ -58,6 +59,34 @@ curl https://openai.good.hidns.vip/v1/chat/completions \
         "content": "Hello, please briefly introduce yourself."
       }
     ]
+  }'
+```
+
+### Image generation (/v1/images/generations)
+
+> Currently, image generation requires model: `grok-imagine-1.0`
+
+Currently only `response_format: "b64_json"` is supported (returns base64).
+
+Allowed `size` values:
+- `1024x1024`
+- `1024x1792`
+- `1792x1024`
+- `1280x720`
+- `720x1280`
+
+#### Return base64 (minimal example)
+
+```bash
+curl https://openai.good.hidns.vip/v1/images/generations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer sk-B882bCwUweSeMRscoNwxZw4vxpjXmvWTLBxO5aXC7WAYhfwa" \
+  -d '{
+    "model": "grok-imagine-1.0",
+    "prompt": "A minimal flat icon of a rocket, white background",
+    "n": 1,
+    "size": "1024x1024",
+    "response_format": "b64_json"
   }'
 ```
 
