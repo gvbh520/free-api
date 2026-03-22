@@ -25,7 +25,7 @@ Free API is a public, no-cost API service compatible with the OpenAI API format.
 
 | Model | Model ID | Description |
 |------|---------|------|
-| ~~GPT~~ | ~~gpt-5.4~~ | ~~Recommended for chat, vision, and tool use~~ |
+| GPT | gpt-5.4 | Recommended for chat, vision, and tool use |
 | Grok | grok-4.1-fast | Best suited for image generation, with fewer conversation restrictions |
 | Claude | claude-sonnet-4.6 | new,test |
 | Qwen | qwen3.5-flash | Tongyi Qianwen |
