@@ -25,9 +25,9 @@ Free API is a public, no-cost API service compatible with both OpenAI API and An
 
 | Model | Model ID | Description |
 |------|---------|------|
-| ~~GPT~~ | ~~gpt-5.4~~ | ~~Recommended for chat, vision, and tool use~~ |
-| Grok | grok-4.1-fast | Best suited for image generation, with fewer conversation restrictions |
-| Claude | anthropic/claude-sonnet-4.6 | Claude Code |
+| GPT | gpt-5.4 | Recommended for chat, vision, and tool use |
+| Grok | grok-4.1-fast | ~~Best suited for image generation~~, with fewer conversation restrictions |
+| ~~Claude~~ | ~~anthropic/claude-sonnet-4.6~~ | ~~Claude Code~~ |
 | Qwen | qwen3.5-flash | Image generation, video recognition |
 | GLM | z-ai/glm5 | Zhipu GLM |
 | Kimi | moonshotai/kimi-k2.5 | Kimi |
@@ -66,7 +66,9 @@ curl https://openai.good.hidns.vip/v1/chat/completions \
 
 ### Image generation (/v1/images/generations)
 
-> Currently, image generation requires model: `grok-imagine-1.0`
+> ⚠️ **Grok image generation is deprecated**. For image generation, please use Qwen or refer to: [https://github.com/smanx/qwen2api](https://github.com/smanx/qwen2api)
+
+~~> Currently, image generation requires model: `grok-imagine-1.0`~~
 
 Currently only `response_format: "b64_json"` is supported (returns base64).
 

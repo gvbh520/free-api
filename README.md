@@ -26,9 +26,9 @@
 
 | 模型名 | 模型ID示例 | 说明 |
 |------|---------|------|
-| ~~GPT~~ | ~~gpt-5.4~~ | ~~对话、识图、工具，推荐使用~~ |
-| Grok | grok-4.1-fast | 生图首选，对话内容限制较少 |
-| Claude | anthropic/claude-sonnet-4.6 | Claude Code |
+| GPT | gpt-5.4 | 对话、识图、工具，推荐使用 |
+| Grok | grok-4.1-fast | ~~生图首选~~，对话内容限制较少 |
+| ~~Claude~~ | ~~anthropic/claude-sonnet-4.6~~ | ~~Claude Code~~ |
 | Qwen | qwen3.5-flash | 生图，视频识别 |
 | GLM | z-ai/glm5 | 智谱 GLM |
 | Kimi | moonshotai/kimi-k2.5 | Kimi |
@@ -67,7 +67,9 @@ curl https://openai.good.hidns.vip/v1/chat/completions \
 
 ### 图片生成（/v1/images/generations）
 
-> 当前图片生成需要指定模型：`grok-imagine-1.0`
+> ⚠️ **Grok 生图功能已失效**，如需生图请使用 Qwen 或参考：[https://github.com/smanx/qwen2api](https://github.com/smanx/qwen2api)
+
+~~> 当前图片生成需要指定模型：`grok-imagine-1.0`~~
 
 当前仅支持 `response_format: "b64_json"`（返回 base64）。
 
